@@ -2,6 +2,7 @@ const { TestScheduler } = require("@jest/core");
 const { translate } = require("./index");
 
 describe("translator", () => {
+
     test("lowercase starts with vowel", () => {
         let result = translate("omni")
         expect(result).toEqual("omniway")
@@ -25,5 +26,10 @@ describe("translator", () => {
     test("uppercase conversion, aloso starts with vowel", () => {
         let result = translate("URALS")
         expect(result).toEqual("uralsway")
+    })
+
+    test("starts with 1 consonant", () => {
+        let result = translate("gamble")
+        expect(result).toEqual("amblegay")
     })
 })

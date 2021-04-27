@@ -1,10 +1,14 @@
 function translate (string) {
     string = string.toLowerCase();
-    let vowelString = "way";
-    if (string === string.startsWith("a", "e", "i", "o", "u")) { 
+
+    let vowels = ["a", "e", "i", "o", "u"]
+
+    if (vowels.indexOf(string[0]) > -1) { 
+        return string + "way";
+    } else {
         
     }
-    return string += vowelString;
+    
 }
  
 module.exports.translate = translate;
